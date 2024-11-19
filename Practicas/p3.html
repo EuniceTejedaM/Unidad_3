@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Práctica 3</title>
+</head>
+<body>
+    <script>
+        let name = "";
+        let activity = "";
+
+        function respuesta1(){
+            alert("Favor de reiniciar la página y reingresar los datos de manera correcta");
+        }
+
+        function respuesta2(){
+            alert("Sus datos fueron guardados de manera correcta");
+        }
+
+        function msjInicio(){
+            alert("Bienvenido, ojalá disfrute la página");
+        }
+
+        function insertar_datos(){
+
+            let name = prompt("Ingresa tu nombre:");
+            let activity = prompt("Ingresa tu actividad favorita:");
+            let respuesta = confirm("Tus datos son correctos?");
+            if(respuesta){
+                respuesta2();
+            }else{
+                respuesta1();
+            }
+        }
+
+        msjInicio();
+        insertar_datos();
+    </script>
+</body>
+</html>
