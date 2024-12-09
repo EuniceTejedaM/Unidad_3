@@ -2,7 +2,7 @@
 const suma = (num1, num2) => num1 + num2;
 
 // Función para verificar si un número es par
-const esPar = (num) => num % 2 === 0;
+const esPar = (num) => (num % 2 === 0 ? "Es par" : "Es impar");
 
 // Aplicación de .map
 const aplicarMap = (arr) => arr.map((el) => el * 2);
