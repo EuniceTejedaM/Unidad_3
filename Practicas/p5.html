@@ -4,61 +4,11 @@
 <head>
     <meta charset='utf-8'>
     <title>Práctica 5</title>
+    <link rel="stylesheet" href="css/estilop5.css">
 </head>
 
 <body>
-    <style>
-        body {
-            background-color: #957dad;
-        }
-    </style>
-
-    <script>
-
-        frutifantastico();
-        promediando();
-        numerando();
-
-        function frutifantastico() {
-            let frutas = [];
-            let n = prompt("¿Cuantas frutas quiere agregar?");
-            for (let i = 0; i < n; i++) {
-                frutas[i] = prompt("Nombre de la fruta");
-            }
-            for (let i = 0; i < n; i++) {
-                console.log(frutas[i]);
-            }
-        }
-
-        function promediando() {
-            let calificaciones = [0];
-            let sum = 0;
-            let n = parseFloat(prompt("¿Cuántas materias tienes?"));
-            for (let i = 0; i < n; i++) {
-                calificaciones[i] = parseFloat(prompt("Calificacion de la materia " + (i + 1) + ":"));
-                sum += calificaciones[i];
-            }
-            console.log("Tu calificacion es de:" + sum / n);
-            alert(("Tu calificacion es de:" + sum / n));
-        }
-
-        function numerando() {
-            let numeros = [1,2,3,4];
-            let sum = 0;
-            let n = parseFloat(prompt("¿Cuantas numeros deseas agregar?"));
-            for (let i = 0; i < n; i++) {
-                numeros.push(parseFloat(prompt("Ingresa el numero " + (i + 1) + ":")));
-            }
-            for (let i = 0; i< numeros.length; i++) {
-                sum += numeros[i];
-            }
-            console.log("Suma de numeros: " + sum);
-            alert("Suma de numeros: " + sum);
-        }
-
-
-
-    </script>
+    <script src="js/p5.js"></script>    
 </body>
 
 </html>
