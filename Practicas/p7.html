@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 7</title>
+</head>
+
+<script src="js/p7.js"></script>
+
+<body>
+
+  <div class="container">
+    <h1>Películas Favoritas</h1>
+
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleMenu()">Películas Favoritas</button>
+      <ul class="menu" id="menu-peliculas">
+        <li><a href="#">Shrek 2</a></li>
+        <li><a href="#">Terrifier</a></li>
+        <li><a href="#">La sustancia</a></li>
+        <li><a href="#">Mi villano favorito 2</a></li>
+        <li><a href="#">Mulan</a></li>
+      </ul>
+    </div>
+
+    <button onclick="eliminarPrimerEnlace()">Eliminar Primer Enlace</button>
+    <button onclick="agregarEnlace()">Agregar Enlace</button>
+  </div>
+
+  <script>
+    function eliminarPrimerEnlace() {
+      const menu = document.getElementById("menu-peliculas");
+      const primerEnlace = menu.firstElementChild;
+      if (primerEnlace) {
+        menu.removeChild(primerEnlace);
+      }
+    }
+
+    function agregarEnlace() {
+      const menu = document.getElementById("menu-peliculas");
+      const nuevoEnlace = prompt("Ingresa la URL de la película:");
+      const nuevoNombre = prompt("Ingresa el nombre de la película:");
+
+      if (nuevoEnlace && nuevoNombre) {
+        const nuevoElemento = document.createElement("li");
+        const enlace = document.createElement("a");
+        enlace.href = nuevoEnlace;
+        enlace.textContent = nuevoNombre;
+        nuevoElemento.appendChild(enlace);
+        menu.appendChild(nuevoElemento);
+      }
+    }
+
+    function toggleMenu() {
+      const menu = document.getElementById("menu-peliculas");
+      menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "block" : "none";
+    }
+  </script>
+
+</body>
+
+</html>
